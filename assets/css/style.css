@@ -2,16 +2,27 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color: rgba(0, 0, 0, 0.662);
+    color: rgba(0, 0, 0, 0.719);
     font-family: sans-serif;
+    transition: 0.2s;
 }
 
+
+
+
+
+/* Header */
+
 header {
+    position: fixed;
+    background-color: white;
+    z-index: 999;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 24px;
     height: 64px;
+    width: 100%;
     box-shadow: 0.5px 0.5px 5px gray;
 }
 
@@ -37,9 +48,88 @@ nav {
 
 
 
-@media screen and (max-width: 900px) {}
+/* MAIN */
+
+/* section Banner */
+
+.banner {
+    padding-top: 64px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background-color: #D8D8D8;
+}
+
+.banner-img {
+    width: 55%;
+    height: 70vh;
+    margin: 32px 24px;
+    background-image: url(../images/banner.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.banner-info {
+    width: 45%;
+    margin-left: 24px;
+}
+
+.banner-info h2 {
+    font-size: 2.2rem;
+    font-weight: 900;
+    letter-spacing: -1px;
+}
+
+.banner-info p {
+    margin: 24px 0;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.banner-info button {
+    padding: 8px;
+    width: 60%;
+    background-color: rgba(0, 0, 0, 0.719);
+    color: white;
+    letter-spacing: 0.5px;
+    border: none;
+}
+
+.banner-info button:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.361);
+    color: white;
+}
+
+
+
+
+
+@media screen and (max-width: 900px) {
+
+    .banner-info h2 {
+        font-size: 1.6rem;
+    }
+
+    .banner-info p {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .banner-info {
+        margin-left: 0;
+    }
+}
 
 @media screen and (max-width: 600px) {
+
+    html {
+        font-size: 10px;
+    }
+    
+/* Header */
     nav {
         display: none;
     }
@@ -53,4 +143,16 @@ nav {
         display: flex;
         justify-content: space-around;
     }
+
+/* MAIN */
+/* section Banner */
+    
+    /* .banner-info h2 {
+        font-size: 1.3rem;
+    }
+
+    .banner-info p {
+        font-size: 0.7rem;
+    } */
+
 }
